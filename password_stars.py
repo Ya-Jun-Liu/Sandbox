@@ -1,8 +1,6 @@
 password_length = 10
-while True:
+password = input("Password: ")
+while len(password) < password_length:
+    print("Invalid password!")
     password = input("Password: ")
-    if len(password) >= password_length:
-        print(len(password) * '*')
-        break
-    else:
-        print("Invalid password!")
+print(len(password) * '*')
